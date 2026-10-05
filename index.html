@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MAC-LIMPO — free disk cleaner and disk space analyzer for macOS</title>
-  <meta name="description" content="Free, open-source macOS disk cleaner and disk space analyzer for developers — a CleanMyMac and DaisyDisk alternative. Clean Xcode, Docker, simulators, node_modules and 40+ caches from the menu bar, and see every gigabyte in a 2D/3D treemap.">
+  <title>Alex S S Fonseca — open-source apps for macOS and developers</title>
+  <meta name="description" content="Open-source projects by Alex S S Fonseca: MAC-LIMPO, a free disk cleaner and disk space analyzer for macOS; VintageLightbox, a free photo editor in Rust; and Open Cleaner RN, a development environment cleaner for React Native.">
   <link rel="canonical" href="https://alexkads.github.io/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
@@ -12,100 +12,142 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="MAC-LIMPO">
-  <meta property="og:title" content="MAC-LIMPO — free disk cleaner for macOS">
-  <meta property="og:description" content="Clean Xcode, Docker, simulators, node_modules and 40+ caches from the menu bar, and see where every gigabyte goes.">
+  <meta property="og:site_name" content="alexkads.github.io">
+  <meta property="og:title" content="Alex S S Fonseca — open-source projects">
+  <meta property="og:description" content="MAC-LIMPO, VintageLightbox and Open Cleaner RN — free, open-source apps for macOS and developers.">
   <meta property="og:url" content="https://alexkads.github.io/">
-  <meta property="og:image" content="https://alexkads.github.io/MAC-LIMPO/assets/images/social-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://alexkads.github.io/favicon-192.png">
+  <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "MAC-LIMPO",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "macOS 27 or later",
-    "description": "Free, open-source macOS disk cleaner and disk space analyzer for developers.",
-    "url": "https://alexkads.github.io/MAC-LIMPO/",
-    "downloadUrl": "https://github.com/alexkads/MAC-LIMPO/releases/latest",
-    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "author": { "@type": "Person", "name": "Alex S S Fonseca", "url": "https://github.com/alexkads" }
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://alexkads.github.io/#me",
+        "name": "Alex S S Fonseca",
+        "url": "https://alexkads.github.io/",
+        "sameAs": ["https://github.com/alexkads"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MAC-LIMPO",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "Free, open-source disk cleaner and disk space analyzer for macOS, made for developers.",
+        "url": "https://alexkads.github.io/MAC-LIMPO/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://alexkads.github.io/#me" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "VintageLightbox",
+        "applicationCategory": "MultimediaApplication",
+        "description": "Free photo editor written in Rust: import, organize, cull, develop and deliver.",
+        "url": "https://alexkads.github.io/VintageLightbox/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://alexkads.github.io/#me" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Open Cleaner RN",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Development environment cleaner for React Native and cross-platform projects, built with Rust and Tauri.",
+        "url": "https://alexkads.github.io/open-cleaner-rn/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://alexkads.github.io/#me" }
+      }
+    ]
   }
   </script>
   <style>
     :root {
       --bg: #f7f6fb; --fg: #1d1b26; --muted: #5d5a6b; --card: #ffffff; --line: #e4e1ee;
-      --accent: #6b3fd4; --accent-fg: #ffffff;
+      --chip: #efeaff; --chip-fg: #4c2a9e; --accent: #6b3fd4; --accent-fg: #ffffff;
     }
     @media (prefers-color-scheme: dark) {
       :root { --bg: #121117; --fg: #ecebf2; --muted: #a29fb2; --card: #1c1a24; --line: #2c2936;
-              --accent: #9b78ff; --accent-fg: #121117; }
+              --chip: #2a2240; --chip-fg: #c8b6ff; --accent: #9b78ff; --accent-fg: #121117; }
     }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--fg);
            font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif; }
-    main { max-width: 960px; margin: 0 auto; padding: 56px 16px 40px; }
+    main { max-width: 1040px; margin: 0 auto; padding: 56px 16px 40px; }
     header { display: flex; align-items: center; gap: 18px; }
-    header img { width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
-    h1 { font-size: clamp(28px, 5vw, 40px); margin: 0; letter-spacing: -.02em; }
-    .tagline { color: var(--muted); margin: 4px 0 0; }
-    p.lead { font-size: 19px; margin: 28px 0 0; max-width: 46em; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
-    .btn { display: inline-block; padding: 11px 20px; border-radius: 10px; text-decoration: none; font-weight: 600;
-           border: 1px solid var(--line); color: var(--fg); background: var(--card); }
+    header img { width: 64px; height: 64px; border-radius: 15px; }
+    h1 { font-size: clamp(26px, 4.5vw, 36px); margin: 0; letter-spacing: -.02em; }
+    .tagline { color: var(--muted); margin: 2px 0 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 40px 0 0; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px;
+            display: flex; flex-direction: column; gap: 12px; }
+    .card .top { display: flex; align-items: center; gap: 14px; }
+    .card .top img { width: 56px; height: 56px; border-radius: 13px; object-fit: cover; }
+    .card h2 { font-size: 20px; margin: 0; }
+    .card .kind { color: var(--muted); font-size: 14px; margin: 0; }
+    .card p.desc { margin: 0; font-size: 15.5px; flex: 1; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { font-size: 12.5px; padding: 3px 9px; border-radius: 999px; background: var(--chip); color: var(--chip-fg); }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-block; padding: 8px 15px; border-radius: 9px; text-decoration: none; font-weight: 600; font-size: 15px;
+           border: 1px solid var(--line); color: var(--fg); background: transparent; }
     .btn.primary { background: var(--accent); color: var(--accent-fg); border-color: transparent; }
-    code { font: 14px ui-monospace, "SF Mono", Menlo, monospace; background: var(--card); border: 1px solid var(--line);
-           padding: 10px 14px; border-radius: 10px; display: block; overflow-x: auto; white-space: pre; margin-top: 18px; }
-    figure { margin: 36px 0 0; }
-    figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 36px 0 0; }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
-    .card h2 { font-size: 17px; margin: 0 0 6px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
     footer { color: var(--muted); font-size: 14px; margin-top: 44px; border-top: 1px solid var(--line); padding-top: 18px; }
-    footer a, .pt a { color: var(--accent); }
-    .pt { color: var(--muted); font-size: 15px; margin-top: 24px; }
+    footer a { color: var(--accent); }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <img src="/favicon-192.png" alt="MAC-LIMPO icon" width="72" height="72">
+    <img src="/favicon-192.png" alt="" width="64" height="64">
     <div>
-      <h1>MAC-LIMPO</h1>
-      <p class="tagline">Free, open-source disk cleaner and disk space analyzer for macOS</p>
+      <h1>Alex S S Fonseca</h1>
+      <p class="tagline">Open-source apps for macOS, photographers and developers</p>
     </div>
   </header>
 
-  <p class="lead">Free up disk space on your Mac. A native menu bar app for developers that cleans Xcode DerivedData, iOS simulators, Docker, <code style="display:inline;padding:1px 6px;margin:0">node_modules</code>, Rust <code style="display:inline;padding:1px 6px;margin:0">target/</code> folders and 40+ caches — and a Disk X-Ray that shows where every gigabyte goes. A free alternative to CleanMyMac and DaisyDisk. No telemetry, no account, no subscription.</p>
-
-  <div class="actions">
-    <a class="btn primary" href="https://alexkads.github.io/MAC-LIMPO/">Website &amp; docs</a>
-    <a class="btn" href="https://github.com/alexkads/MAC-LIMPO/releases/latest">Download</a>
-    <a class="btn" href="https://github.com/alexkads/MAC-LIMPO">Source on GitHub</a>
-  </div>
-  <code>curl -fsSL https://alexkads.github.io/MAC-LIMPO/install.sh | sh</code>
-
-  <figure>
-    <picture>
-      <source srcset="https://alexkads.github.io/MAC-LIMPO/assets/images/disk-xray-3d-dark.png" media="(prefers-color-scheme: dark)">
-      <img src="https://alexkads.github.io/MAC-LIMPO/assets/images/disk-xray-3d-light.png" alt="MAC-LIMPO Disk X-Ray: a 3D treemap of the disk drawn with Metal" width="1040" height="832" loading="lazy">
-    </picture>
-  </figure>
-
   <div class="grid">
-    <div class="card"><h2>Developer caches</h2><p>Xcode, simulators, Docker, node_modules, Rust, Cargo, Go, pnpm, Bun, npm, pip, NuGet, Android SDK, .NET SDKs, IDE caches and more.</p></div>
-    <div class="card"><h2>Disk X-Ray</h2><p>Reads millions of files in seconds. Treemap by file type, folder tree, largest files — pinch to magnify down to a single file, in 2D or 3D.</p></div>
-    <div class="card"><h2>Safe by default</h2><p>Scan first, confirm before cleaning, Trash instead of delete where possible, caches only — never your documents.</p></div>
-  </div>
+    <article class="card">
+      <div class="top">
+        <img src="https://alexkads.github.io/MAC-LIMPO/assets/images/favicon-192.png" alt="MAC-LIMPO icon" width="56" height="56">
+        <div><h2>MAC-LIMPO</h2><p class="kind">Disk cleaner &amp; disk space analyzer for macOS</p></div>
+      </div>
+      <p class="desc">Frees disk space taken by Xcode, simulators, Docker, <code>node_modules</code> and 40+ developer caches from the menu bar, and maps every gigabyte in a 2D/3D treemap. A free alternative to CleanMyMac and DaisyDisk.</p>
+      <div class="chips"><span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">Metal</span><span class="chip">macOS</span></div>
+      <div class="links">
+        <a class="btn primary" href="https://alexkads.github.io/MAC-LIMPO/">Website</a>
+        <a class="btn" href="https://github.com/alexkads/MAC-LIMPO">GitHub</a>
+      </div>
+    </article>
 
-  <p class="pt">Em português: <a href="https://alexkads.github.io/MAC-LIMPO/pt/">limpador de disco gratuito e de código aberto para macOS</a>, feito para desenvolvedores.</p>
+    <article class="card">
+      <div class="top">
+        <img src="https://alexkads.github.io/VintageLightbox/icone.png" alt="VintageLightbox icon" width="56" height="56">
+        <div><h2>VintageLightbox</h2><p class="kind">Photo editor in Rust</p></div>
+      </div>
+      <p class="desc">Import, organize, cull, develop and deliver — a free, Lightroom-style photo workflow written in Rust with a native GPU interface. Made for the Recordar Fotos studio in Gramado and Canela.</p>
+      <div class="chips"><span class="chip">Rust</span><span class="chip">GPUI</span><span class="chip">Photography</span></div>
+      <div class="links">
+        <a class="btn primary" href="https://alexkads.github.io/VintageLightbox/">Website</a>
+        <a class="btn" href="https://github.com/alexkads/VintageLightbox">GitHub</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="top">
+        <img src="https://raw.githubusercontent.com/alexkads/open-cleaner-rn/main/src-tauri/icons/128x128@2x.png" alt="Open Cleaner RN icon" width="56" height="56">
+        <div><h2>Open Cleaner RN</h2><p class="kind">Dev environment cleaner for React Native</p></div>
+      </div>
+      <p class="desc">Cleans caches and build artifacts of React Native and cross-platform projects to free disk space and keep the development workflow fast. A desktop app built with Rust and Tauri.</p>
+      <div class="chips"><span class="chip">Rust</span><span class="chip">Tauri</span><span class="chip">TypeScript</span><span class="chip">React Native</span></div>
+      <div class="links">
+        <a class="btn primary" href="https://alexkads.github.io/open-cleaner-rn/">Website</a>
+        <a class="btn" href="https://github.com/alexkads/open-cleaner-rn">GitHub</a>
+      </div>
+    </article>
+  </div>
 
   <footer>
-    MAC-LIMPO is free software (GPL-3.0-or-later) by <a href="https://github.com/alexkads">Alex S S Fonseca</a>.
+    More on GitHub: <a href="https://github.com/alexkads">github.com/alexkads</a>
   </footer>
 </main>
 </body>
